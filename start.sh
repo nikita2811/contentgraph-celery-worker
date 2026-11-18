@@ -5,4 +5,4 @@ set -e
 python health.py &
 
 # 'exec' so Celery receives shutdown signals
-exec celery -A contentgraph-celery-worker worker -Q default --loglevel=info --concurrency=2
+exec celery -A contentgraph_backend worker -Q default --loglevel=info --concurrency=2
